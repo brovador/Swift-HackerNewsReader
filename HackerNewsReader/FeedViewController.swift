@@ -13,26 +13,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var tableView : UITableView
     @IBOutlet var loadingIndicator : UIActivityIndicatorView
     
-    var newsItems : String[]
-    var links : String[]
-    
-    var tmpNewsItem : String
-    
-    var isTitleTag : Bool
-    var isLinkTag : Bool
-    
-    init(coder aDecoder: NSCoder!)
-    {
-        newsItems = []
-        links = []
-        tmpNewsItem = ""
-        
-        isTitleTag = false
-        isLinkTag = false
-        
-        super.init(coder: aDecoder)
-    }
-    
+    var newsItems : String[] = []
+    var links : String[] = []
+    var tmpNewsItem : String = ""
+    var isTitleTag : Bool = false
+    var isLinkTag : Bool = false
     
     override func viewDidLoad()
     {
@@ -50,7 +35,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let url = NSURL(string:rssUrl)
         let request = NSURLRequest(URL:url)
         
-        var _self = self
+        weak var _self = self
         var session = NSURLSession.sharedSession()
         var task = session.dataTaskWithRequest(request,
             completionHandler : { (data : NSData!, response : NSURLResponse!, error : NSError!) in
@@ -59,7 +44,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 parser.parse()
                 
                 dispatch_async(dispatch_get_main_queue()) {
-                    _self.loadingIndicator.stopAnimating()
+                    _self!.loadingIndicator.stopAnimating()
                 }
             }
         )
@@ -104,9 +89,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func parserDidEndDocument(parser: NSXMLParser!)
     {
-        var _self = self
+        weak var _self = self
         dispatch_async(dispatch_get_main_queue()) {
-            _self.tableView.reloadData()
+            _self!.tableView.reloadData()
         }
     }
     
