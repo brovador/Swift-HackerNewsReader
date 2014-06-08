@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C30C02A1943E838009247CA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C30C0281943E838009247CA /* MainStoryboard.storyboard */; };
+		1C30C02B1943E838009247CA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C0291943E838009247CA /* FeedViewController.swift */; };
 		1C94E3C01943D51800261E54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94E3BF1943D51800261E54 /* AppDelegate.swift */; };
 		1C94E3C21943D51800261E54 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C94E3C11943D51800261E54 /* Images.xcassets */; };
-		1C94E3CE1943D51800261E54 /* HackerNewsReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94E3CD1943D51800261E54 /* HackerNewsReaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,16 +21,23 @@
 			remoteGlobalIDString = 1C94E3B91943D51800261E54;
 			remoteInfo = HackerNewsReader;
 		};
+		1C94E3D71943D52A00261E54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C94E3B21943D51700261E54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C94E3B91943D51800261E54;
+			remoteInfo = HackerNewsReader;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C30C0281943E838009247CA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1C30C0291943E838009247CA /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		1C94E3BA1943D51800261E54 /* HackerNewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerNewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C94E3BE1943D51800261E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C94E3BF1943D51800261E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C94E3C11943D51800261E54 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1C94E3C71943D51800261E54 /* HackerNewsReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerNewsReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C94E3CC1943D51800261E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C94E3CD1943D51800261E54 /* HackerNewsReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerNewsReaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				1C94E3BC1943D51800261E54 /* HackerNewsReader */,
-				1C94E3CA1943D51800261E54 /* HackerNewsReaderTests */,
 				1C94E3BB1943D51800261E54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +78,8 @@
 		1C94E3BC1943D51800261E54 /* HackerNewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				1C30C0281943E838009247CA /* MainStoryboard.storyboard */,
+				1C30C0291943E838009247CA /* FeedViewController.swift */,
 				1C94E3BF1943D51800261E54 /* AppDelegate.swift */,
 				1C94E3C11943D51800261E54 /* Images.xcassets */,
 				1C94E3BD1943D51800261E54 /* Supporting Files */,
@@ -82,23 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				1C94E3BE1943D51800261E54 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1C94E3CA1943D51800261E54 /* HackerNewsReaderTests */ = {
-			isa = PBXGroup;
-			children = (
-				1C94E3CD1943D51800261E54 /* HackerNewsReaderTests.swift */,
-				1C94E3CB1943D51800261E54 /* Supporting Files */,
-			);
-			path = HackerNewsReaderTests;
-			sourceTree = "<group>";
-		};
-		1C94E3CB1943D51800261E54 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1C94E3CC1943D51800261E54 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -135,6 +127,7 @@
 			);
 			dependencies = (
 				1C94E3C91943D51800261E54 /* PBXTargetDependency */,
+				1C94E3D81943D52A00261E54 /* PBXTargetDependency */,
 			);
 			name = HackerNewsReaderTests;
 			productName = HackerNewsReaderTests;
@@ -182,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C30C02A1943E838009247CA /* MainStoryboard.storyboard in Resources */,
 				1C94E3C21943D51800261E54 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C30C02B1943E838009247CA /* FeedViewController.swift in Sources */,
 				1C94E3C01943D51800261E54 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C94E3CE1943D51800261E54 /* HackerNewsReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +213,11 @@
 			isa = PBXTargetDependency;
 			target = 1C94E3B91943D51800261E54 /* HackerNewsReader */;
 			targetProxy = 1C94E3C81943D51800261E54 /* PBXContainerItemProxy */;
+		};
+		1C94E3D81943D52A00261E54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C94E3B91943D51800261E54 /* HackerNewsReader */;
+			targetProxy = 1C94E3D71943D52A00261E54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -377,6 +376,7 @@
 				1C94E3D31943D51800261E54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C94E3D41943D51800261E54 /* Build configuration list for PBXNativeTarget "HackerNewsReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -385,6 +385,7 @@
 				1C94E3D61943D51800261E54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
